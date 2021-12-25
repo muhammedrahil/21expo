@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'Screens/HomeScreen.dart';
 import 'Screens/contentScreen.dart';
 import 'Screens/temp.dart';
+import 'contentFolder/contentPageTemplate.dart';
 
 
 

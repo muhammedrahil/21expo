@@ -1,8 +1,11 @@
+
 import 'dart:ui';
 
+import 'package:expo_21/contentFolder/contentPageTemplate.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import '../textFolder/texts.dart';
+// import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import 'Drower.dart';
 import 'contentScreen.dart';
@@ -70,9 +73,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      drawer: DrowerWidget(),
+      drawer:DrowerWidget(),
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         elevation: 0,
       ),
       body: SafeArea(
@@ -84,11 +87,7 @@ class HomeScreen extends StatelessWidget {
               child: Image(
                 image: AssetImage('assets/21 Days Logo.png'),
               ),
-              //  Text(
-              //   'Malbar\n hello world',
-              //   style: GoogleFonts.playfairDisplay(
-              //       fontSize: 45.6, fontWeight: FontWeight.w700),
-              // ),
+              
             ),
             const SizedBox(
               width: 10,
@@ -103,7 +102,7 @@ class HomeScreen extends StatelessWidget {
                       buttonaction: () {
                         Navigator.of(context)
                             .push(MaterialPageRoute(builder: (ctx) {
-                          return const Content_Screen();
+                          return ContantPageTemplate(imagPath:  'assets/Article.jpg', TextSample: Article);
                         }));
                       },
                       Discription: 'Discription Discription'),
@@ -112,7 +111,7 @@ class HomeScreen extends StatelessWidget {
                       buttonaction: () {
                         Navigator.of(context)
                             .push(MaterialPageRoute(builder: (ctx) {
-                          return const Content_Screen();
+                          return  ContantPageTemplate(imagPath:  'assets/Histography.jpg', TextSample: History);
                         }));
                       },
                       Discription: 'Discription Discription')
@@ -148,11 +147,14 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     IconsCard(
                         iconData: 'hello',
-                        icons: Icons.home,
+                        icons: Icons.person,
                         color: Colors.blue[200],
                         Textcolor: Colors.blue,
                         onTap: () {
-                          print('hell');
+                          Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
                         }),
                     Padding(padding: EdgeInsets.all(1)),
                     IconsCard(
@@ -161,7 +163,10 @@ class HomeScreen extends StatelessWidget {
                         color: Colors.brown[200],
                         Textcolor: Colors.brown,
                         onTap: () {
-                          print('hello');
+                           Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
                         }),
                     Padding(padding: EdgeInsets.all(1)),
                     IconsCard(
@@ -170,15 +175,18 @@ class HomeScreen extends StatelessWidget {
                         color: Colors.green[200],
                         Textcolor: Colors.green,
                         onTap: () {
-                          print('object');
+                          Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
                         }),
                   ],
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: const SizedBox(
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: SizedBox(
                 width: 10,
               ),
             ),
@@ -191,7 +199,7 @@ class HomeScreen extends StatelessWidget {
                       NextPageAddress: () {
                         Navigator.of(context)
                             .push(MaterialPageRoute(builder: (ctx) {
-                          return const Content_Screen();
+                          return  ContantPageTemplate(imagPath:  'assets/Histography.jpg', TextSample: History);
                         }));
                       },
                       ImagePath: 'assets/fall18.png',
@@ -214,7 +222,7 @@ class HomeScreen extends StatelessWidget {
                       NextPageAddress: () {
                         Navigator.of(context)
                             .push(MaterialPageRoute(builder: (ctx) {
-                          return const Content_Screen();
+                          return ContantPageTemplate(imagPath:  'assets/Article.jpg', TextSample: Article);
                         }));
                       },
                       ImagePath: 'assets/fall4.png',
@@ -224,7 +232,7 @@ class HomeScreen extends StatelessWidget {
                       NextPageAddress: () {
                         Navigator.of(context)
                             .push(MaterialPageRoute(builder: (ctx) {
-                          return const Content_Screen();
+                          return ContantPageTemplate(imagPath:  'assets/Article.jpg', TextSample: Article);
                         }));
                       },
                       ImagePath: 'assets/fall1.png',
@@ -269,7 +277,7 @@ Widget IconsCard(
         ),
         child: Stack(
           children: [
-            Positioned(left: 6, top: 4, child: Icon(icons)),
+            Positioned(left: 10, top: 7, child: Icon(icons)),
             Positioned(
               left: 39,
               top: 8,
@@ -354,3 +362,4 @@ Widget VedioCard({
     ),
   );
 }
+
