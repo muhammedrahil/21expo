@@ -22,9 +22,9 @@ class iconsCards extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-          margin: const EdgeInsets.only(right: 49.2),
-          height: 35.6,
-          width: 130.6,
+          margin: const EdgeInsets.only(right: 49.2,left: 0),
+          height: 25.6,
+          width: 120.6,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(9.6),
             boxShadow: const [

@@ -22,7 +22,7 @@ class SmallCard extends StatelessWidget {
           backgroundColor: MaterialStateProperty.all(Colors.white),
           elevation: MaterialStateProperty.all(0)),
       child: Container(
-        height: 124,
+        height: 165,
         width: 155,
         decoration: BoxDecoration(
             image: DecorationImage(

@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 class DrowerWidget extends StatelessWidget {
   const DrowerWidget({ Key? key }) : super(key: key);
-final String _url = 'https://flutter.dev';
+final String _url = 'https://mshaheerz.github.io/malabar2/';
   @override
   Widget build(BuildContext context) {
     return Drawer(
