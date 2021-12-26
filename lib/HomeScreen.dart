@@ -2,7 +2,7 @@ import 'package:expo_21/Cards/Cards.dart';
 import 'package:expo_21/Cards/IconsCard.dart';
 import 'package:expo_21/Cards/SmallCard.dart';
 import 'package:expo_21/Cards/vedioCard.dart';
-import 'package:expo_21/Screens/list_view.dart';
+import 'package:expo_21/Screens/book_list_screen.dart';
 import 'package:expo_21/contentFolder/contentPageTemplate.dart';
 import 'package:expo_21/leaders/Template.dart';
 import 'package:expo_21/leaders/Templatecards.dart';
