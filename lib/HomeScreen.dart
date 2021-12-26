@@ -47,43 +47,56 @@ class HomeScreen extends StatelessWidget {
                   // Big Cards Sections
                   Cards(
                     imgPath: 'assets/Article.jpg',
-                    discription: 'Discription Discription',
+                    discription: 'മലബാർ കലാപം',
                     buttonaction: () {
                       Navigator.of(context)
                           .push(MaterialPageRoute(builder: (ctx) {
                         return ContantPageTemplate(
-                            AppBartitle: 'Articles',
+                            AppBartitle: 'മലബാർ കലാപം',
                             imagPath: 'assets/Article.jpg',
-                            TextSample: Article);
+                            TextSample: MlabarKalabham);
                       }));
                     },
                   ),
                   Cards(
                     imgPath: 'assets/Histography.jpg',
-                    discription: 'Discription Discription',
+                    discription: 'കൊണ്ടോട്ടി ചരിത്രം ',
                     buttonaction: () {
                       Navigator.of(context)
                           .push(MaterialPageRoute(builder: (ctx) {
                         return ContantPageTemplate(
-                            AppBartitle: 'Histography',
+                            AppBartitle: 'വലിയപറമ്പ് കൂട്ടക്കുരുതി ',
                             imagPath: 'assets/Histography.jpg',
-                            TextSample: History);
+                            TextSample: Kondotty);
                       }));
                     },
                   ),
                   Cards(
-                    imgPath: 'assets/Histography.jpg',
-                    discription: 'Discription Discription',
+                    imgPath: 'assets/Incidents.jpg',
+                    discription: 'വാരിയൻ കുന്നത്ത്\n കുഞ്ഞഹമ്മദ് ഹാജി',
                     buttonaction: () {
                       Navigator.of(context)
                           .push(MaterialPageRoute(builder: (ctx) {
                         return ContantPageTemplate(
-                            AppBartitle: 'Histography',
-                            imagPath: 'assets/Histography.jpg',
-                            TextSample: History);
+                            AppBartitle: 'വാരിയൻ കുന്നത്ത് കുഞ്ഞഹമ്മദ് ഹാജി',
+                            imagPath: 'assets/variamkunnan.png',
+                            TextSample: Varyam_Kunn_kunju_ahammad_haji);
                       }));
                     },
-                  )
+                  ),
+                   Cards(
+                    imgPath: 'assets/Article.jpg',
+                    discription: 'ആലി മുസ്‌ലിയാർ',
+                    buttonaction: () {
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (ctx) {
+                        return ContantPageTemplate(
+                            AppBartitle: 'ആലി മുസ്‌ലിയാർ',
+                            imagPath: 'assets/fall20.png',
+                            TextSample: AliMusliyar);
+                      }));
+                    },
+                  ),
 
                   // Big Cards Sections
                 ],
@@ -142,9 +155,9 @@ class HomeScreen extends StatelessWidget {
                           Navigator.of(context)
                               .push(MaterialPageRoute(builder: (ctx) {
                             return LeadersTemplate(
-                                PersonName: "PersonName",
-                                imagePath: "assets/fall17.png",
-                                TextDiscription: History);
+                                PersonName: "ആലി മുസ്‌ലിയാർ",
+                                imagePath: "assets/fall20.png",
+                                TextDiscription: AliMusliyar);
                           }));
                         }),
                     //IconCards

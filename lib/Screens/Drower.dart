@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 class DrowerWidget extends StatelessWidget {
   const DrowerWidget({ Key? key }) : super(key: key);
-
+final String _url = 'https://flutter.dev';
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -59,7 +59,7 @@ class DrowerWidget extends StatelessWidget {
          Divider(thickness: 1,),
         ListTile(
            hoverColor: Colors.grey,
-          onTap: (){},
+          onTap: _launchURL,
           leading:Icon(Icons.person,size: 40,),
                     title: Text('Our Team'),
                     
@@ -85,4 +85,7 @@ class DrowerWidget extends StatelessWidget {
       
     );
   }
+  void _launchURL() async {
+  if (!await launch(_url)) throw 'Could not launch $_url';
+}
 }

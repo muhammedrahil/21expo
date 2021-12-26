@@ -46,7 +46,7 @@ class Cards extends StatelessWidget {
                     icon: const Icon(Icons.next_plan))),
             Positioned(
               bottom: 10,
-              left: 100,
+              left: 90,
               child: Text(
                 discription,
                 style: const TextStyle(color: Colors.white, fontSize: 15),
