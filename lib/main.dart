@@ -3,9 +3,8 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/services.dart';
 
 import 'Screens/HomeScreen.dart';
-import 'Screens/contentScreen.dart';
-import 'Screens/temp.dart';
-import 'contentFolder/contentPageTemplate.dart';
+
+
 
 
 
@@ -16,6 +15,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  
   
 
   // This widget is the root of your application.
@@ -33,8 +33,9 @@ class MyApp extends StatelessWidget {
       
         primarySwatch: Colors.blue,
       ),
-
+      //spalshScreen Part
       home:AnimatedSplashScreen(splash: Image(image: AssetImage('assets/21 Days.png'),height: 700,width: 800,),
+      splashIconSize: 200,
       duration: 3000,
        splashTransition: SplashTransition.rotationTransition,
        backgroundColor: Colors.white,

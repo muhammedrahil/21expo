@@ -4,14 +4,17 @@ import 'package:flutter/material.dart';
 
 class ContantPageTemplate extends StatelessWidget {
  final String imagPath;
+  final String AppBartitle;
  final String TextSample;
-  const ContantPageTemplate({Key? key, required this.imagPath, required this.TextSample ,}) : super(key: key);
+  const ContantPageTemplate({Key? key, required this.imagPath, required this.TextSample, required this.AppBartitle ,}) : super(key: key);
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          centerTitle: true,
+          title: Text(AppBartitle),
           backgroundColor: Colors.black,
           elevation: 0,
         ),
@@ -36,7 +39,7 @@ class ContantPageTemplate extends StatelessWidget {
                     left: 15, right: 10, top: 10, bottom: 10),
                 child: Text(
                 TextSample,
-                  style: TextStyle(fontSize: 20, wordSpacing: 3),
+                  style: TextStyle(fontSize: 20, wordSpacing: 3,fontWeight: FontWeight.w500, ),
                 ),
               ),
             ),

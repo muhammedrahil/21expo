@@ -1,7 +1,5 @@
-
-import 'dart:ui';
-
 import 'package:expo_21/contentFolder/contentPageTemplate.dart';
+import 'package:expo_21/leaders/Template.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../textFolder/texts.dart';
@@ -73,7 +71,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      drawer:DrowerWidget(),
+      drawer: const DrowerWidget(),
       appBar: AppBar(
         backgroundColor: Colors.black,
         elevation: 0,
@@ -82,12 +80,11 @@ class HomeScreen extends StatelessWidget {
         child: ListView(
           physics: const BouncingScrollPhysics(),
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(left: 15.8),
+            const Padding(
+              padding: EdgeInsets.only(left: 15.8),
               child: Image(
                 image: AssetImage('assets/21 Days Logo.png'),
               ),
-              
             ),
             const SizedBox(
               width: 10,
@@ -102,7 +99,10 @@ class HomeScreen extends StatelessWidget {
                       buttonaction: () {
                         Navigator.of(context)
                             .push(MaterialPageRoute(builder: (ctx) {
-                          return ContantPageTemplate(imagPath:  'assets/Article.jpg', TextSample: Article);
+                          return ContantPageTemplate(
+                              AppBartitle: 'Articles',
+                              imagPath: 'assets/Article.jpg',
+                              TextSample: Article);
                         }));
                       },
                       Discription: 'Discription Discription'),
@@ -111,7 +111,10 @@ class HomeScreen extends StatelessWidget {
                       buttonaction: () {
                         Navigator.of(context)
                             .push(MaterialPageRoute(builder: (ctx) {
-                          return  ContantPageTemplate(imagPath:  'assets/Histography.jpg', TextSample: History);
+                          return ContantPageTemplate(
+                              AppBartitle: 'Histography',
+                              imagPath: 'assets/Histography.jpg',
+                              TextSample: History);
                         }));
                       },
                       Discription: 'Discription Discription')
@@ -119,7 +122,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 28.8, top: 28.8, bottom: 16),
+              padding: const EdgeInsets.only(left: 28.8, top: 28.8, bottom: 16),
               child: Row(
                 children: [
                   Text(
@@ -127,14 +130,14 @@ class HomeScreen extends StatelessWidget {
                     style: GoogleFonts.playfairDisplay(
                         fontSize: 28,
                         fontWeight: FontWeight.w700,
-                        color: Color(0xFF000000)),
+                        color: const Color(0xFF000000)),
                   ),
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: const SizedBox(
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: SizedBox(
                 width: 10,
               ),
             ),
@@ -146,39 +149,30 @@ class HomeScreen extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   children: [
                     IconsCard(
-                        iconData: 'hello',
-                        icons: Icons.person,
+                        iconData: 'Reference',
+                        icons: Icons.book,
                         color: Colors.blue[200],
                         Textcolor: Colors.blue,
                         onTap: () {
                           Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (ctx) {
-                          return const Content_Screen();
-                        }));
+                              .push(MaterialPageRoute(builder: (ctx) {
+                            return const Content_Screen();
+                          }));
                         }),
-                    Padding(padding: EdgeInsets.all(1)),
+                    const Padding(padding: EdgeInsets.all(1)),
                     IconsCard(
-                        iconData: 'hello',
-                        icons: Icons.search,
-                        color: Colors.brown[200],
-                        Textcolor: Colors.brown,
-                        onTap: () {
-                           Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (ctx) {
-                          return const Content_Screen();
-                        }));
-                        }),
-                    Padding(padding: EdgeInsets.all(1)),
-                    IconsCard(
-                        iconData: 'hello',
-                        icons: Icons.home,
+                        iconData: 'Leaders',
+                        icons: Icons.person,
                         color: Colors.green[200],
                         Textcolor: Colors.green,
                         onTap: () {
                           Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (ctx) {
-                          return const Content_Screen();
-                        }));
+                              .push(MaterialPageRoute(builder: (ctx) {
+                            return LeadersTemplate(
+                                PersonName: "PersonName",
+                                imagePath: "assets/fall17.png",
+                                TextDiscription: History);
+                          }));
                         }),
                   ],
                 ),
@@ -199,16 +193,20 @@ class HomeScreen extends StatelessWidget {
                       NextPageAddress: () {
                         Navigator.of(context)
                             .push(MaterialPageRoute(builder: (ctx) {
-                          return  ContantPageTemplate(imagPath:  'assets/Histography.jpg', TextSample: History);
+                          return ContantPageTemplate(
+                              AppBartitle: 'Books',
+                              imagPath: 'assets/fall18.png',
+                              TextSample: Article);
                         }));
                       },
                       ImagePath: 'assets/fall18.png',
-                      TextColors: Colors.black87,
-                      TextDiscription: 'TextDiscriptionTextDiscription'),
+                      TextColors: Colors.black,
+                      TextDiscription: 'Books'),
                   VedioCard(
+                      icon: Icons.video_library,
                       NextVideoAddress: () {},
                       TextDiscription: '',
-                      TextColors: Colors.white,
+                      IconColors: Colors.grey,
                       ImagePath: 'assets/fall4.png')
                 ],
               ),
@@ -222,22 +220,22 @@ class HomeScreen extends StatelessWidget {
                       NextPageAddress: () {
                         Navigator.of(context)
                             .push(MaterialPageRoute(builder: (ctx) {
-                          return ContantPageTemplate(imagPath:  'assets/Article.jpg', TextSample: Article);
+                          return const Content_Screen();
                         }));
                       },
                       ImagePath: 'assets/fall4.png',
                       TextColors: Colors.white,
-                      TextDiscription: 'TextDiscriptionTextDiscription'),
+                      TextDiscription: ''),
                   SmallCard(
                       NextPageAddress: () {
                         Navigator.of(context)
                             .push(MaterialPageRoute(builder: (ctx) {
-                          return ContantPageTemplate(imagPath:  'assets/Article.jpg', TextSample: Article);
+                          return const Content_Screen();
                         }));
                       },
                       ImagePath: 'assets/fall1.png',
                       TextColors: Colors.black87,
-                      TextDiscription: 'TextDiscriptionTextDiscription'),
+                      TextDiscription: ''),
                 ],
               ),
             ),
@@ -248,28 +246,30 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
+// ignore: non_constant_identifier_names
 Widget IconsCard(
     {required String iconData,
     required IconData icons,
     required Color? color,
+    // ignore: non_constant_identifier_names
     required Color Textcolor,
     required void Function() onTap}) {
   return GestureDetector(
     onTap: onTap,
     child: Container(
-        margin: EdgeInsets.only(right: 19.2),
+        margin: const EdgeInsets.only(right: 49.2),
         height: 35.6,
-        width: 90.6,
+        width: 130.6,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(9.6),
           boxShadow: const [
             BoxShadow(
               color: Colors.black87,
               offset: Offset(
-                5.0,
+                4.0,
                 0.0,
               ),
-              blurRadius: 10.0,
+              blurRadius: 5.0,
               spreadRadius: 1.0,
             ), //BoxShad
           ],
@@ -294,10 +294,15 @@ Widget IconsCard(
   );
 }
 
+// ignore: non_constant_identifier_names
 Widget SmallCard({
+  // ignore: non_constant_identifier_names
   required void Function() NextPageAddress,
+  // ignore: non_constant_identifier_names
   required String TextDiscription,
+  // ignore: non_constant_identifier_names
   required Color TextColors,
+  // ignore: non_constant_identifier_names
   required String ImagePath,
 }) {
   return ElevatedButton(
@@ -315,25 +320,26 @@ Widget SmallCard({
       child: Stack(
         children: [
           Positioned(
-            bottom: 10,
-            left: 10,
+            bottom: 50,
+            left: 43.6,
             child: Text(
               TextDiscription,
-              style: TextStyle(color: TextColors, fontSize: 10),
+              style: GoogleFonts.playfairDisplay(
+                  fontSize: 25, fontWeight: FontWeight.w900, color: TextColors),
             ),
-          )
+          ),
         ],
       ),
     ),
   );
 }
 
-Widget VedioCard({
-  required void Function() NextVideoAddress,
-  required String TextDiscription,
-  required Color TextColors,
-  required String ImagePath,
-}) {
+Widget VedioCard(
+    {required void Function() NextVideoAddress,
+    required String TextDiscription,
+    required Color IconColors,
+    required String ImagePath,
+    required IconData icon}) {
   return ElevatedButton(
     onPressed: NextVideoAddress,
     style: ButtonStyle(
@@ -348,18 +354,12 @@ Widget VedioCard({
           borderRadius: BorderRadius.circular(15.5)),
       child: Stack(
         children: [
-          Positioned(left: 55,top: 35, child: Icon(Icons.video_collection,size: 50,)),
           Positioned(
-            bottom: 10,
-            left: 10,
-            child: Text(
-              TextDiscription,
-              style: TextStyle(color: TextColors, fontSize: 10),
-            ),
-          )
+              left: 55,
+              top: 35,
+              child: Icon(icon, size: 50, color: IconColors)),
         ],
       ),
     ),
   );
 }
-
