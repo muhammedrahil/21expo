@@ -33,130 +33,136 @@ class BooksTemplate extends StatelessWidget {
               ),
             ),
             
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SizedBox(
-                height: 150,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return const Content_Screen();
-                          }));
-                        },
-                        ImagePath: 'assets/books.jpg',
-                        TextColors: Colors.white,
-                        TextDiscription: ''),
-                    SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return const Content_Screen();
-                          }));
-                        },
-                        ImagePath: 'assets/books.jpg',
-                        TextColors: Colors.white,
-                        TextDiscription: ''),
-                  ],
-                ),
+            SizedBox(
+              height: 150,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
+                      },
+                      ImagePath: 'assets/books.jpg',
+                      TextColors: Colors.white,
+                      TextDiscription: ''),
+                  SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
+                      },
+                      ImagePath: 'assets/books.jpg',
+                      TextColors: Colors.white,
+                      TextDiscription: ''),
+                ],
               ),
             ),
-             Padding(
-               padding: const EdgeInsets.all(8.0),
-               child: SizedBox(
-                height: 150,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return const Content_Screen();
-                          }));
-                        },
-                        ImagePath: 'assets/books.jpg',
-                        TextColors: Colors.white,
-                        TextDiscription: ''),
-                     SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return const Content_Screen();
-                          }));
-                        },
-                        ImagePath: 'assets/books.jpg',
-                        TextColors: Colors.white,
-                        TextDiscription: ''),
-                  ],
-                ),
+             const Padding(
+              padding: EdgeInsets.all(15.0),
+              child: SizedBox(
+                width: 10,
+              ),
             ),
-             ),
-             Padding(
-               padding: const EdgeInsets.all(8.0),
-               child: SizedBox(
-                height: 150,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return const Content_Screen();
-                          }));
-                        },
-                        ImagePath: 'assets/books.jpg',
-                        TextColors: Colors.white,
-                        TextDiscription: ''),
-                    SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return const Content_Screen();
-                          }));
-                        },
-                        ImagePath: 'assets/books.jpg',
-                        TextColors: Colors.white,
-                        TextDiscription: ''),
-                  ],
-                ),
+             SizedBox(
+              height: 150,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
+                      },
+                      ImagePath: 'assets/books.jpg',
+                      TextColors: Colors.white,
+                      TextDiscription: ''),
+                   SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
+                      },
+                      ImagePath: 'assets/books.jpg',
+                      TextColors: Colors.white,
+                      TextDiscription: ''),
+                ],
+              ),
             ),
-             ),
-             Padding(
-               padding: const EdgeInsets.all(8.0),
-               child: SizedBox(
-                height: 150,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return const Content_Screen();
-                          }));
-                        },
-                        ImagePath: 'assets/books.jpg',
-                        TextColors: Colors.white,
-                        TextDiscription: ''),
-                    SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return const Content_Screen();
-                          }));
-                        },
-                        ImagePath: 'assets/books.jpg',
-                        TextColors: Colors.white,
-                        TextDiscription: ''),
-                  ],
-                ),
+             const Padding(
+              padding: EdgeInsets.all(15.0),
+              child: SizedBox(
+                width: 10,
+              ),
             ),
-             ),
+             SizedBox(
+              height: 150,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
+                      },
+                      ImagePath: 'assets/books.jpg',
+                      TextColors: Colors.white,
+                      TextDiscription: ''),
+                  SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
+                      },
+                      ImagePath: 'assets/books.jpg',
+                      TextColors: Colors.white,
+                      TextDiscription: ''),
+                ],
+              ),
+            ),
+             const Padding(
+              padding: EdgeInsets.all(15.0),
+              child: SizedBox(
+                width: 10,
+              ),
+            ),
+             SizedBox(
+              height: 150,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
+                      },
+                      ImagePath: 'assets/books.jpg',
+                      TextColors: Colors.white,
+                      TextDiscription: ''),
+                  SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
+                      },
+                      ImagePath: 'assets/books.jpg',
+                      TextColors: Colors.white,
+                      TextDiscription: ''),
+                ],
+              ),
+            ),
           ],
         ),
       ),

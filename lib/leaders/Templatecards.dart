@@ -36,136 +36,142 @@ class Templatecards extends StatelessWidget {
               ),
             ),
             
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SizedBox(
-                height: 150,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return LeadersTemplate(
-                                  PersonName: "ആലി മുസ്‌ലിയാർ",
-                                  imagePath: "assets/fall20.png",
-                                  TextDiscription: AliMusliyar);
-                          }));
-                        },
-                        ImagePath: "assets/fall20.png",
-                        TextColors: Colors.white,
-                        TextDiscription: ''),
-                    SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return LeadersTemplate(
-                                  PersonName: 'വാരിയൻ കുന്നത്ത് കുഞ്ഞഹമ്മദ് ഹാജി',
-                                  imagePath: 'assets/variamkunnan.png',
-                                  TextDiscription: Varyam_Kunn_kunju_ahammad_haji);
-                          }));
-                        },
-                        ImagePath: 'assets/variamkunnan.png',
-                        TextColors: Colors.white,
-                        TextDiscription: ''),
-                  ],
-                ),
+            SizedBox(
+              height: 150,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return LeadersTemplate(
+                                PersonName: "ആലി മുസ്‌ലിയാർ",
+                                imagePath: "assets/fall20.png",
+                                TextDiscription: AliMusliyar);
+                        }));
+                      },
+                      ImagePath: "assets/fall20.png",
+                      TextColors: Colors.white,
+                      TextDiscription: ''),
+                  SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return LeadersTemplate(
+                                PersonName: 'വാരിയൻ കുന്നത്ത് കുഞ്ഞഹമ്മദ് ഹാജി',
+                                imagePath: 'assets/variamkunnan.png',
+                                TextDiscription: Varyam_Kunn_kunju_ahammad_haji);
+                        }));
+                      },
+                      ImagePath: 'assets/variamkunnan.png',
+                      TextColors: Colors.white,
+                      TextDiscription: ''),
+                ],
               ),
             ),
-             Padding(
-               padding: const EdgeInsets.all(8.0),
-               child: SizedBox(
-                height: 150,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return const Content_Screen();
-                          }));
-                        },
-                        ImagePath: 'assets/person.png',
-                        TextColors: Colors.white,
-                        TextDiscription: ''),
-                     SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return const Content_Screen();
-                          }));
-                        },
-                        ImagePath: 'assets/person.png',
-                        TextColors: Colors.white,
-                        TextDiscription: ''),
-                  ],
-                ),
+             const Padding(
+              padding: EdgeInsets.all(15.0),
+              child: SizedBox(
+                width: 10,
+              ),
             ),
-             ),
-             Padding(
-               padding: const EdgeInsets.all(8.0),
-               child: SizedBox(
-                height: 150,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return const Content_Screen();
-                          }));
-                        },
-                        ImagePath: 'assets/person.png',
-                        TextColors: Colors.white,
-                        TextDiscription: ''),
-                    SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return const Content_Screen();
-                          }));
-                        },
-                        ImagePath: 'assets/person.png',
-                        TextColors: Colors.white,
-                        TextDiscription: ''),
-                  ],
-                ),
+             SizedBox(
+              height: 150,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
+                      },
+                      ImagePath: 'assets/person.png',
+                      TextColors: Colors.white,
+                      TextDiscription: ''),
+                   SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
+                      },
+                      ImagePath: 'assets/person.png',
+                      TextColors: Colors.white,
+                      TextDiscription: ''),
+                ],
+              ),
             ),
-             ),
-             Padding(
-               padding: const EdgeInsets.all(8.0),
-               child: SizedBox(
-                height: 150,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return const Content_Screen();
-                          }));
-                        },
-                        ImagePath: 'assets/person.png',
-                        TextColors: Colors.white,
-                        TextDiscription: ''),
-                    SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return const Content_Screen();
-                          }));
-                        },
-                        ImagePath: 'assets/person.png',
-                        TextColors: Colors.white,
-                        TextDiscription: ''),
-                  ],
-                ),
+             const Padding(
+              padding: EdgeInsets.all(15.0),
+              child: SizedBox(
+                width: 10,
+              ),
             ),
-             ),
+             SizedBox(
+              height: 150,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
+                      },
+                      ImagePath: 'assets/person.png',
+                      TextColors: Colors.white,
+                      TextDiscription: ''),
+                  SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
+                      },
+                      ImagePath: 'assets/person.png',
+                      TextColors: Colors.white,
+                      TextDiscription: ''),
+                ],
+              ),
+            ),
+             const Padding(
+              padding: EdgeInsets.all(15.0),
+              child: SizedBox(
+                width: 10,
+              ),
+            ),
+             SizedBox(
+              height: 150,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
+                      },
+                      ImagePath: 'assets/person.png',
+                      TextColors: Colors.white,
+                      TextDiscription: ''),
+                  SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
+                      },
+                      ImagePath: 'assets/person.png',
+                      TextColors: Colors.white,
+                      TextDiscription: ''),
+                ],
+              ),
+            ),
           ],
         ),
       ),

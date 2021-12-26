@@ -127,44 +127,41 @@ class HomeScreen extends StatelessWidget {
                 width: 10,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SizedBox(
-                height: 45.6,
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 25),
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      //IconCards
-                      iconsCards(
-                        iconData: 'Reference',
-                        icons: Icons.book,
-                        color: Colors.blue[200],
-                        Textcolor: Colors.blue,
+            SizedBox(
+              height: 45.6,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 25),
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    //IconCards
+                    iconsCards(
+                      iconData: 'Reference',
+                      icons: Icons.book,
+                      color: Colors.blue[200],
+                      Textcolor: Colors.blue,
+                      onTap: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
+                      },
+                    ),
+
+                    const Padding(padding: EdgeInsets.only(left: 12)),
+                    iconsCards(
+                        iconData: 'Leaders',
+                        icons: Icons.person,
+                        color: Colors.green[200],
+                        Textcolor: Colors.green,
                         onTap: () {
                           Navigator.of(context)
                               .push(MaterialPageRoute(builder: (ctx) {
-                            return const Content_Screen();
+                            return Templatecards();
                           }));
-                        },
-                      ),
-
-                      const Padding(padding: EdgeInsets.only(left: 12)),
-                      iconsCards(
-                          iconData: 'Leaders',
-                          icons: Icons.person,
-                          color: Colors.green[200],
-                          Textcolor: Colors.green,
-                          onTap: () {
-                            Navigator.of(context)
-                                .push(MaterialPageRoute(builder: (ctx) {
-                              return Templatecards();
-                            }));
-                          }),
-                      //IconCards
-                    ],
-                  ),
+                        }),
+                    //IconCards
+                  ],
                 ),
               ),
             ),
@@ -174,69 +171,69 @@ class HomeScreen extends StatelessWidget {
                 width: 10,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SizedBox(
-                height: 150,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    //smallCards
-                    SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return BooksTemplate();
-                          }));
-                        },
-                        ImagePath: 'assets/books.jpg',
-                        TextColors: Colors.white,
-                        TextDiscription: 'Books'),
-                    VedioCard(
-                        icon: Icons.video_library,
-                        NextVideoAddress: () {
-                           Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return const VideoScreen();
-                          }));
-                        },
-                        TextDiscription: '',
-                        IconColors: Colors.white,
-                        ImagePath: 'assets/fall4.png')
-                  ],
-                ),
+            SizedBox(
+              height: 150,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  //smallCards
+                  SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return BooksTemplate();
+                        }));
+                      },
+                      ImagePath: 'assets/books.jpg',
+                      TextColors: Colors.white,
+                      TextDiscription: 'Books'),
+                  VedioCard(
+                      icon: Icons.video_library,
+                      NextVideoAddress: () {
+                         Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const VideoScreen();
+                        }));
+                      },
+                      TextDiscription: '',
+                      IconColors: Colors.white,
+                      ImagePath: 'assets/fall4.png')
+                ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+             const Padding(
+              padding: EdgeInsets.all(15.0),
               child: SizedBox(
-                height: 150,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return const Content_Screen();
-                          }));
-                        },
-                        ImagePath: 'assets/fall4.png',
-                        TextColors: Colors.white,
-                        TextDiscription: ''),
-                    SmallCard(
-                        NextPageAddress: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (ctx) {
-                            return const Content_Screen();
-                          }));
-                        },
-                        ImagePath: 'assets/fall1.png',
-                        TextColors: Colors.black87,
-                        TextDiscription: ''),
-                    //smallCards
-                  ],
-                ),
+                width: 10,
+              ),
+            ),
+            SizedBox(
+              height: 150,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
+                      },
+                      ImagePath: 'assets/fall4.png',
+                      TextColors: Colors.white,
+                      TextDiscription: ''),
+                  SmallCard(
+                      NextPageAddress: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (ctx) {
+                          return const Content_Screen();
+                        }));
+                      },
+                      ImagePath: 'assets/fall1.png',
+                      TextColors: Colors.black87,
+                      TextDiscription: ''),
+                  //smallCards
+                ],
               ),
             ),
           ],
