@@ -4,6 +4,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
+
+import 'Drower.dart';
+
 class AurTeam extends StatefulWidget {
   const AurTeam({Key? key}) : super(key: key);
 
@@ -19,18 +22,27 @@ class _AurTeamState extends State<AurTeam> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
+     
       appBar: AppBar(
-        title: const Text('Flutter WebView example'),
+    
+          backgroundColor: Colors.black,
+        elevation: 0,
+          
+        title: const Text('ourteam'),
       ),
-      body: WebView(
-        initialUrl: 'https://mshaheerz.github.io/malabar2/',
-        javascriptMode: JavascriptMode.unrestricted,
-      onWebViewCreated: (controller){
-        this.controller = controller;
-      },
-        
-      
-      
+      body: Stack(
+        children: [
+          WebView(
+            initialUrl: 'https://mshaheerz.github.io/malabar2',
+            javascriptMode: JavascriptMode.unrestricted,
+            onWebViewCreated: (WebViewController webViewController) {
+              controller = webViewController;
+            },
+          ),
+         
+        ],
+       
       ),
     );
   }
