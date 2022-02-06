@@ -68,32 +68,28 @@ class _VideoScreenState extends State<VideoScreen> {
 
   final data = [
     Post(
-      image:
-          'https://i.ytimg.com/vi/1WB8C-5MP5o/hqdefault.jpg',
+      image: 'https://i.ytimg.com/vi/1WB8C-5MP5o/hqdefault.jpg',
       title: 'മലബാർ കലാപം : ചരിത്രവും വ്യാഖ്യാനവും',
       author: 'എം എൻ കാരശ്ശേരി',
       date: '25 Mar 2020',
       videoId: '1WB8C-5MP5o',
     ),
     Post(
-      image:
-          'https://i.ytimg.com/vi/C_Qw4u18UTg/hq720.jpg',
+      image: 'https://i.ytimg.com/vi/C_Qw4u18UTg/hq720.jpg',
       title: 'മാപ്പിള ലഹള: മലബാറിലെ ഹിന്ദുവംശഹത്യ',
       author: 'Sanku T Das',
       date: '24 Mar 2020',
       videoId: 'ojB2VFdaPW8',
     ),
     Post(
-      image:
-          'https://i.ytimg.com/vi/c2r2iwiFBn8/hq720.jpg',
+      image: 'https://i.ytimg.com/vi/c2r2iwiFBn8/hq720.jpg',
       title: 'മലബാർ കലാപം : ചരിത്ര പുസ്തകങ്ങളിലൂടെ',
       author: 'SOVI\'s WORLD',
       date: '15 Mar 2020',
       videoId: 'c2r2iwiFBn8',
     ),
     Post(
-      image:
-          'https://i.ytimg.com/vi/14LdtcBZzjw/hq720.jpg',
+      image: 'https://i.ytimg.com/vi/14LdtcBZzjw/hq720.jpg',
       title: 'The real History of Variyan Kunnathu Kunjahammed Haji',
       author: 'Ashraf Malayil',
       date: '11 Mar 2020',
@@ -117,7 +113,9 @@ class _VideoScreenState extends State<VideoScreen> {
         },
       ),
       builder: (context, player) => Scaffold(
-        appBar: AppBar(backgroundColor: Colors.black,),
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+        ),
         body: SafeArea(
           child: ListView(
             children: [
@@ -137,25 +135,28 @@ class _VideoScreenState extends State<VideoScreen> {
 
   Widget videoContainer(videoContainer) => AspectRatio(
         aspectRatio: 16 / 9,
-        child: Container(
-          margin: const EdgeInsets.all(0),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-          ),
+        child: Hero(
+          tag: 2,
           child: Container(
-            clipBehavior: Clip.hardEdge,
-            child: videoContainer,
+            margin: const EdgeInsets.all(0),
             decoration: BoxDecoration(
-              boxShadow: shadowList,
-              // borderRadius:
-              //     const BorderRadius.only(bottomRight: Radius.circular(100)),
-              gradient: LinearGradient(
-                begin: Alignment.bottomRight,
-                stops: const [0.1, 0.9],
-                colors: [
-                  Colors.black.withOpacity(.8),
-                  Colors.black.withOpacity(.1)
-                ],
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Container(
+              clipBehavior: Clip.hardEdge,
+              child: videoContainer,
+              decoration: BoxDecoration(
+                boxShadow: shadowList,
+                // borderRadius:
+                //     const BorderRadius.only(bottomRight: Radius.circular(100)),
+                gradient: LinearGradient(
+                  begin: Alignment.bottomRight,
+                  stops: const [0.1, 0.9],
+                  colors: [
+                    Colors.black.withOpacity(.8),
+                    Colors.black.withOpacity(.1)
+                  ],
+                ),
               ),
             ),
           ),
@@ -277,7 +278,6 @@ class PostCell extends StatelessWidget {
               width: 120,
               height: 75,
               child: ClipRRect(
-
                 borderRadius: BorderRadius.circular(15),
                 child: FadeInImage.assetNetwork(
                   fit: BoxFit.fill,

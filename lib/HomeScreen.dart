@@ -2,6 +2,7 @@ import 'package:expo_21/Cards/Cards.dart';
 import 'package:expo_21/Cards/IconsCard.dart';
 import 'package:expo_21/Cards/SmallCard.dart';
 import 'package:expo_21/Cards/vedioCard.dart';
+import 'package:expo_21/Screens/book_list_screen.dart';
 import 'package:expo_21/contentFolder/contentPageTemplate.dart';
 import 'package:expo_21/leaders/Template.dart';
 import 'package:expo_21/leaders/Templatecards.dart';
@@ -181,23 +182,26 @@ class HomeScreen extends StatelessWidget {
                       NextPageAddress: () {
                         Navigator.of(context)
                             .push(MaterialPageRoute(builder: (ctx) {
-                          return BooksTemplate();
+                          return BooksListScreen();
                         }));
                       },
                       ImagePath: 'assets/books.jpg',
                       TextColors: Colors.white,
                       TextDiscription: 'Books'),
-                  VedioCard(
-                      icon: Icons.video_library,
-                      NextVideoAddress: () {
-                         Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (ctx) {
-                          return const VideoScreen();
-                        }));
-                      },
-                      TextDiscription: '',
-                      IconColors: Colors.white,
-                      ImagePath: 'assets/fall4.png')
+                  Hero(
+                    tag: 2,
+                    child: VedioCard(
+                        icon: Icons.video_library,
+                        NextVideoAddress: () {
+                           Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (ctx) {
+                            return const VideoScreen();
+                          }));
+                        },
+                        TextDiscription: '',
+                        IconColors: Colors.white,
+                        ImagePath: 'assets/fall4.png'),
+                  )
                 ],
               ),
             ),
