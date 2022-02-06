@@ -12,6 +12,8 @@ class AurTeam extends StatefulWidget {
 }
 
 class _AurTeamState extends State<AurTeam> {
+  late WebViewController controller;
+
 
 
   @override
@@ -21,14 +23,12 @@ class _AurTeamState extends State<AurTeam> {
         title: const Text('Flutter WebView example'),
       ),
       body: WebView(
-        initialUrl: 'https://www.google.com/',
+        initialUrl: 'https://mshaheerz.github.io/malabar2/',
         javascriptMode: JavascriptMode.unrestricted,
-        onWebViewCreated: (WebViewController webViewController) {
-          compute(
-            webViewController.loadUrl,
-            'https://www.google.com/',
-          );
-        },
+      onWebViewCreated: (controller){
+        this.controller = controller;
+      },
+        
       
       
       ),
