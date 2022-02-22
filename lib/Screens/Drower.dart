@@ -1,91 +1,103 @@
+import 'package:expo_21/Screens/AurTeam.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
+
 class DrowerWidget extends StatelessWidget {
-  const DrowerWidget({ Key? key }) : super(key: key);
-final String _url = 'https://mshaheerz.github.io/malabar2/';
+  const DrowerWidget({Key? key}) : super(key: key);
+  final String _url = 'https://mshaheerz.github.io/malabar2/';
   @override
   Widget build(BuildContext context) {
     return Drawer(
-     
       elevation: 0,
-      child: ListView(children:  [
-        // DrawerHeader(child: Text('expo',style: GoogleFonts.playfairDisplay(
-        //             fontSize: 45.6, fontWeight: FontWeight.w700),),),
+      child: ListView(
+        children: [
+          // DrawerHeader(child: Text('expo',style: GoogleFonts.playfairDisplay(
+          //             fontSize: 45.6, fontWeight: FontWeight.w700),),),
 
           SizedBox(
             height: 120,
             child: Padding(
-                padding: EdgeInsets.only(left: 38.8, top: 14.8, bottom: 16),
-                child: Row(
-                  children: [
-                    Text(
-                      'F',
+              padding: EdgeInsets.only(left: 38.8, top: 14.8, bottom: 16),
+              child: Row(
+                children: [
+                  Text(
+                    'F',
+                    style: GoogleFonts.playfairDisplay(
+                        fontSize: 58,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.red),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 17),
+                    child: Text(
+                      'expo',
                       style: GoogleFonts.playfairDisplay(
-                          fontSize: 58,
+                          fontSize: 38,
                           fontWeight: FontWeight.w700,
-                          color: Colors.red),
+                          color: Color(0xFF000000)),
                     ),
-                     Padding(
-                       padding: const EdgeInsets.only(top: 17),
-                       child: Text(
-                        'expo',
-                        style: GoogleFonts.playfairDisplay(
-                            fontSize: 38,
-                            fontWeight: FontWeight.w700,
-                            color: Color(0xFF000000)),
-                    ),
-                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
+            ),
           ),
-        
-         ListTile(
-           hoverColor: Colors.grey,
-          onTap: (){},
-          leading:Icon(Icons.home,size: 40,),
-                    title: Text('Home'),
-                   
-        ),
-        Divider(thickness: 1,),
-        ListTile(
-           hoverColor: Colors.grey,
-          onTap: (){},
-          leading:Icon(Icons.admin_panel_settings,size: 40,),
-                    title: Text('Privacy Policy'),
-                    
-        ),
-         Divider(thickness: 1,),
-        ListTile(
-           hoverColor: Colors.grey,
-          onTap: _launchURL,
-          leading:Icon(Icons.person,size: 40,),
-                    title: Text('Our Team'),
-                    
-        ),
-          Divider(thickness: 1,),
-        ListTile(
-           hoverColor: Colors.grey,
-          onTap: (){},
-          leading:Icon(Icons.star,size: 40,),
-                    title: Text('Rate'),
-                  
-        ),
-          Divider(thickness: 1,),
-        ListTile(
-           hoverColor: Colors.grey,
-          onTap: (){},
-          leading:Icon(Icons.cottage,size: 40,),
-                    title: Text('Collage'),
-                   
-        ),
-        
-      ],),
-      
+
+          ListTile(
+            hoverColor: Colors.grey,
+            onTap: () {},
+            leading: Icon(
+              Icons.home,
+              size: 40,
+            ),
+            title: Text('Home'),
+          ),
+          Divider(
+            thickness: 1,
+          ),
+          ListTile(
+            hoverColor: Colors.grey,
+            onTap: () {},
+            leading: Icon(
+              Icons.admin_panel_settings,
+              size: 40,
+            ),
+            title: Text('Privacy Policy'),
+          ),
+          Divider(
+            thickness: 1,
+          ),
+          ListTile(
+            hoverColor: Colors.grey,
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return AurTeam();
+              }));
+            },
+            leading: Icon(
+              Icons.person,
+              size: 40,
+            ),
+            title: Text('Our Team'),
+          ),
+          Divider(
+            thickness: 1,
+          ),
+          ListTile(
+            hoverColor: Colors.grey,
+            onTap: () {},
+            leading: Icon(
+              Icons.star,
+              size: 40,
+            ),
+            title: Text('Rate'),
+          ),
+          Divider(
+            thickness: 1,
+          ),
+          ListTile(hoverColor: Colors.grey, onTap: () {})
+        ],
+      ),
     );
   }
-  void _launchURL() async {
-  if (!await launch(_url)) throw 'Could not launch $_url';
-}
 }
