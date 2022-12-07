@@ -1,4 +1,4 @@
-# expo_21
+# expo_21 Collage Exihibition Works
 
 A new Flutter project.
 
